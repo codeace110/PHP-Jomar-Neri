@@ -10,38 +10,62 @@
     <title>Jomar Neri</title>
 </head>
 <?php
-function printPyramid($size) {
-    // Upside
-    for ($i = 1; $i <= $size; $i++) {
-        echo str_repeat("&nbsp;", ($size - $i)* 5); // print spaces
-        echo "*"; // first star
-        if ($i > 1) {
-            //middle spaces and stars
-            echo str_repeat("&nbsp;", ($i - 1) * 10 - 1); 
-            echo "*";
-        }
-        echo "<br>";
-    }
+$size = 5;
 
-    // Downside 
-    for ($i = $size - 1; $i > 0; $i--) {
-        // print spaces
-        echo str_repeat("&nbsp;", ($size - $i)* 5 - 1); 
-        echo "*"; 
-        if ($i > 1) {
-            // middle spaces and stars
-            echo str_repeat("&nbsp;", ($i - 1) * 10 - 1); 
-            echo "*";
-        }
-        echo "<br>";
+// Downside pyramid
+for ($i = 0; $i < $size; $i++) {
+    // Printing spaces
+    for ($j = 0; $j < $i; $j++) {
+        echo "&nbsp;&nbsp;&nbsp;";
     }
+    // Printing stars
+    echo "*";
+    for ($k = 0; $k < ($size - $i - 1) * 2; $k++) {
+        echo "&nbsp;&nbsp;&nbsp;";
+    }
+    if ($i != $size - 1) { // Avoid printing an extra star on the last row
+        echo "*";
+    }
+    echo "<br>";
 }
 
-$size = 4;
+// Upside-down pyramid
+// for ($i = $size - 1; $i >= 0; $i--) {
+//     // Printing spaces
+//     for ($j = 0; $j < $i; $j++) {
+//         echo "&nbsp;&nbsp;&nbsp;";
+//     }
+//     // Printing stars
+//     echo "*";
+//     for ($k = 0; $k < ($size - $i - 1) * 2; $k++) {
+//         echo "&nbsp;&nbsp;&nbsp;";
+//     }
+//     if ($i != 5) { // Avoid printing an extra star on the first row
+//         echo "*";
+//     }
+//     echo "<br>";
+// }
 
-printPyramid($size);
-printPyramid($size); 
-?> 
+for ($i = $size - 1; $i >= 0; $i--) {
+    // Printing spaces
+    for ($j = 0; $j < $i; $j++) {
+        echo "&nbsp;&nbsp;&nbsp;";
+    }
+    // Printing stars
+    if ($i != $size - 1) { // Avoid printing the first star on the first row
+        echo "*";
+    }
+    for ($k = 0; $k < ($size - $i - 1) * 2; $k++) {
+        echo "&nbsp;&nbsp;&nbsp;";
+    }
+    if ($i != 5) { // Avoid printing an extra star on the first row
+        echo "*";
+    }
+    echo "<br>";
+}
+
+?>
+
 
 
 <body>

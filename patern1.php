@@ -33,4 +33,3 @@ $size = 4;
 printPyramid($size);
 printPyramid($size); 
 ?> 
-
