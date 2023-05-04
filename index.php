@@ -10,63 +10,35 @@
     <title>Jomar Neri</title>
 </head>
 <?php
-function printPyramid($size)
-{
-    // Downside 
-    // Downside 
-    for ($i = $size - 0; $i > 0; $i--) {
-        // print spaces
-        echo str_repeat("&nbsp;", ($size - $i) * 5);
-        // print number or star
-        if ($i == 1) {
-            echo "1";
-        } else if ($i % 2 == 0) {
-            echo "*";
-        } else {
-            echo "$i";
-        }
-        if ($i > 1) {
-            // middle spaces and stars
-            echo str_repeat("&nbsp;", ($i - 1) * 10);
-            // print number or star
-            if ($i % 2 == 0) {
-                echo "*";
-            } else {
-                echo "$i";
-            }
-        }
-        echo "<br>";
-    }
+$characters = range('a', 'k');
+$table = array();
 
-    // Upside
-    for ($i = 2; $i <= $size; $i++) {
-        // print spaces
-        echo str_repeat("&nbsp;", ($size - $i) * 5);
-        // first digit
-        if ($i % 2 == 1) {
-            echo "$i";
-        } else {
-            echo "*";
-        }
-        if ($i % 2 == 1) {
-            //middle spaces and stars
-            echo str_repeat("&nbsp;", ($i - 1) * 10);
-            echo "$i";
-        }  else {
-            echo str_repeat("&nbsp;", ($i - 1) * 10);
-            echo "*";
-        }
-        echo "<br>";
+// Generate random characters and populate the table
+for ($i = 0; $i < 4; $i++) {
+    $row = array();
+    for ($j = 0; $j < 5; $j++) {
+        $row[] = $characters[rand(0, count($characters) - 1)];
     }
+    $table[] = $row;
 }
 
-$size = 5;
+// Display the table
+echo "<table>";
+foreach ($table as $row) {
+    echo "<tr>";
+    foreach ($row as $key => $char) {
+        $class = ($key % 2 == 0) ? 'even' : 'odd';
+        echo "<td class=\"$class\">$char</td>";
+    }
+    echo "</tr>";
+}
+echo "</table>";
 
-printPyramid($size);
-
+// CSS style to highlight even columns
+echo "<style>";
+echo "td.even { background-color: yellow; }";
+echo "</style>";
 ?>
-
-
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
