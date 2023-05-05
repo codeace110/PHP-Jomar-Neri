@@ -5,9 +5,13 @@
    
 }
 
-body{
-    background: linear-gradient(90deg, rgba(2, 2, 36, 0.24), rgba(100, 100, 206, 0.26));
+body {
+  background-image: url(assets/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px;
 }
+
 
 header {
     padding: 30px;
@@ -30,7 +34,7 @@ header {
   .container{
     width: 100vw;
     height: 60vh;
-    background: linear-gradient(90deg, rgba(1, 1, 46, 0.856), rgba(139, 139, 252, 0.911));
+    background-color: #1b1a629a;
   }
   .table{
     background: linear-gradient(100deg, rgb(29, 29, 155), rgba(2, 2, 36, 0.911));
