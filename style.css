@@ -9,7 +9,6 @@ body {
   background-image: url(assets/img/background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0px;
 }
 
 
@@ -50,15 +49,34 @@ header {
   }
   
 
-  h1{
+  h1,h2,h3,h4,h5,h6{
     color: aliceblue;
   }
 
-  th,td{
+  .table_main{
     background: linear-gradient(90deg, rgba(2, 2, 49, 0.8), rgba(105, 105, 196, 0.911));
     margin-bottom: 20px;
   }
 
-  td{
-    background: linear-gradient(90deg, rgba(29, 29, 155, 0.8), rgba(2, 2, 36, 0.911));
+
+
+
+  body tr:hover {
+    background-color: blue;
+
+  }
+    /*******text area theme*******/
+
+  /*******text area theme Ends*******/
+
+  /*******part2 num1*******/
+
+
+  .container,.part2Num1{
+    padding: 20px;
+  }
+
+  .text-area{
+    width: 400px;
+    height: 400px;
   }

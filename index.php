@@ -23,33 +23,32 @@
 </header>
 <main>
     <div class="container">
-      <div class="row">
+      <div class="col">
         <div class="col-md-6 part_one" >
-          <section>
             <table class="table table-dark table-hover">
               <thead>
                 <h1>Part 1</h1>
               </thead>
               <tbody>
                 <tr class="table-row">
-                  <th scope="row">1. Create the given pattern</th>
-                  <td class="table_btn"><button class="btn btn-success">Task page</button></td>
+                  <th class="table_main" scope="row">1. Create the given pattern</th>
+                  <td class="table_main"><a href="part2-num1.php" class="btn btn-success">Task page</a></td>
+
                 </tr>
                 <tr class="table-row">
-                  <th scope="row">2. Create the given pattern (x)</th>
-                  <td class="table_btn"><button class="btn btn-success">Task page</button></td>
+                  <th class="table_main" scope="row">2. Create the given pattern (x)</th>
+                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr >
                 <tr class="table-row">
-                  <th scope="row">3. Create the given pattern</th>
-                  <td class="table_btn"><button class="btn btn-success">Task page</button></td>
+                  <th class="table_main" scope="row">3. Create the given pattern</th>
+                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr>
                 <tr class="table-row">
-                  <th scope="row">4.Create the given pattern</th>
-                  <td class="table_btn"><button class="btn btn-success">Task page</button></td>
+                  <th class="table_main" scope="row">4.Create the given pattern</th>
+                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr>
               </tbody>
             </table>
-          </section>
         </div>
         <div class="col-md-6">
                <section>
@@ -59,24 +58,24 @@
               </thead>
               <tbody>
                 <tr class="table-row">
-                  <th scope="row">1. Generate a random character from a -k</th>
-                  <td class="table_btn"><button class="btn btn-success">Task page</button></td>
+                  <th class="table_main" scope="row">1. Generate a random character from a -k</th>
+                  <td class="table_main"><a href="part2-num1.php" class="btn btn-success">Task page</a></td>
                 </tr>
                 <tr class="table-row">
-                  <th scope="row">2. Manipulation of multidimensional array</th>
-                  <td class="table_btn"><button class="btn btn-success">Task page</button></td>
+                  <th class="table_main" scope="row">2. Manipulation of multidimensional array</th>
+                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr>
                 <tr class="table-row">
-                  <th scope="row">3. Create a stack of integers using arrays( First in last out )</th>
-                  <td class="table_btn"><button class="btn btn-success">Task page</button></td>
+                  <th class="table_main" scope="row">3. Create a stack of integers using arrays( First in last out )</th>
+                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr>
                 <tr class="table-row">
-                  <th scope="row">4. Create a queue of integers using arrays (first in first out )</th>
-                  <td class="table_btn"><button class="btn btn-success">Task page</button></td>
+                  <th class="table_main" scope="row">4. Create a queue of integers using arrays (first in first out )</th>
+                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr>
                 <tr class="table-row">
-                  <th scope="row">5. Using a PHP POST method, ask the user to input 2 numbers</th>
-                  <td class="table_btn"><button class="btn btn-success">Task page</button></td>
+                  <th class="table_main" scope="row">5. Using a PHP POST method, ask the user to input 2 numbers</th>
+                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr>
               </tbody>
             </table>
