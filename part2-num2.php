@@ -77,6 +77,7 @@
                                     $row_sums[$i] += $table[$i][$j];
                                 }
                             }
+                            $total_sum = array_sum($numbers);
 
                             // Print the table with CSS styling and padding
                             echo "<style>
@@ -101,17 +102,15 @@
                                 }
                                 echo "<td>$row_sums[$i]</td>";
                                 echo "</tr>";
+                     
                             }
                             echo "<tr>";
                             for ($j = 0; $j < 4; $j++) {
-                                echo "<td>$col_sums[$j]";
+                                echo "<td>$col_sums[$j]</td>";
                             }
-                            echo array_sum($numbers) ;
                             echo "</tr>";
                             echo "</table>";
-
                             ?>
-
 
                         </tbody>
                     </table>
