@@ -8,7 +8,6 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.63.1/lib/codemirror.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.63.1/theme/darcula.css" />
     <link rel="stylesheet" href="style.css">
     <title>Part2--1</title>
 </head>
@@ -75,53 +74,59 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <h1>Code</h1>
-                <textarea class="text-area CodeMirror" id="code">
-                <?php
-                $characters = range('a', 'k');
-                shuffle($characters);
-                $table = array();
+                <div class="col-md-6">
 
-                for ($i = 0; $i < 4; $i++) {
-                    $row = array();
-                    for ($j = 0; $j < 5; $j++) {
-                        $row[] = $characters[$i * 2 + $j];
-                    }
-                    $table[] = $row;
+            <h1>Code</h1>
+            <textarea class="CodeMirror" id="code">
+            <? php
+            $characters = range('a', 'k');
+            shuffle($characters);
+            $table = array();
+
+            for ($i = 0; $i < 4; $i++) {
+                $row = array();
+                for ($j = 0; $j < 5; $j++) {
+                    $row[] = $characters[$i * 2 + $j];
                 }
+                $table[] = $row;
+            }
 
-                // Display the table
-                echo "<table class='table'>";
-                foreach ($table as $row) {
-                    echo "<tr style='height: 70px;'>";
-                    foreach ($row as $key => $char) {
-                        $class = ($key % 2 == 0) ? 'even' : 'odd';
-                        echo "<td class=\"$class\" style='width: 70px; color:white;'>$char</td>";
-                    }
-                    echo "</tr>";
+            // Display the table
+            echo "<table class='table'>";
+            foreach ($table as $row) {
+                echo "<tr style='height: 70px;'>";
+                foreach ($row as $key => $char) {
+                    $class = ($key % 2 == 0) ? 'even' : 'odd';
+                    echo "<td class=\"$class\" style='width: 70px; color:white;'>$char</td>";
                 }
-                echo "</table>";
+                echo "</tr>";
+            }
+            echo "</table>";
 
-                echo "<style>";
-                echo "td.even { background-color: rgb(62, 95, 10); }";
-                echo "</style>";
-                ?>
-
-                </textarea>
+            echo "<style>";
+            echo "td.even { background-color: rgb(62, 95, 10); }";
+            echo "</style>";
+            ?>
+            </textarea>
+        </div>
             </div>
         </div>
     </main>
     <!-- Bootstrap JS and Bundle CDN links -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.63.1/lib/codemirror.js"></script>
     <script>
         var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
             lineNumbers: true,
             mode: "application/x-httpd-php",
-            matchBrackets: true
+            matchBrackets: true,
+            viewportMargin: Infinity,
+            lineWrapping: true,
+            maxLineLength: 80,
+            theme: "darcula"
         });
     </script>
+    
 </body>
 
 </html>
