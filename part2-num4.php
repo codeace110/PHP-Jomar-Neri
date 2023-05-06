@@ -40,44 +40,53 @@
         <div class="col-md-6">
           <?php
           session_start();
-
           if (!isset($_SESSION['queue'])) {
             $_SESSION['queue'] = array();
           }
 
           if (isset($_POST['push'])) {
             $value = $_POST['value'];
-            array_push($_SESSION['queue'], $value);
+            $queue = $_SESSION['queue'];
+            $queue[count($queue)] = $value;
+            $_SESSION['queue'] = $queue;
           }
 
           if (isset($_POST['pop'])) {
-            if (!empty($_SESSION['queue'])) {
-              array_shift($_SESSION['queue']);
+            $queue = $_SESSION['queue'];
+            if (count($queue) > 0) {
+              $value = $queue[0];
+              for ($i = 0; $i < count($queue) - 1; $i++) {
+                $queue[$i] = $queue[$i + 1];
+              }
+              unset($queue[count($queue) - 1]);
+              $_SESSION['queue'] = $queue;
             }
           }
 
           $queue = $_SESSION['queue'];
-
           ?>
 
           <div class="col-md-6">
             <h1>Queue Example</h1>
 
             <form method="post">
-              <label for="value">Enter a value:</label>
-              <input type="text" name="value" id="value">
-              <button type="submit" name="push">Push</button>
+            
+              <div class="col">
+              <input type="text" name="value" id="value" placeholder="Enter Value">    <button type="submit" name="push">Push</button>
               <button type="submit" name="pop">Pop</button>
+           
+              </div>
+
             </form>
 
             <h2>Current Queue:</h2>
-            <ul id="queue">
-              <?php foreach ($queue as $value) : ?>
-                <li><?= $value ?></li>
-              <?php endforeach; ?>
+            <ul class="queue-list">
+              <?php for ($i = 0; $i < count($queue); $i++) : ?>
+                <li><?= $queue[$i] ?></li>
+              <?php endfor; ?>
             </ul>
-
           </div>
+
 
 
         </div>
@@ -89,26 +98,32 @@
 <!-- 
              
 session_start();
-
 if (!isset($_SESSION['queue'])) {
   $_SESSION['queue'] = array();
 }
 
 if (isset($_POST['push'])) {
   $value = $_POST['value'];
-  array_push($_SESSION['queue'], $value);
+  $queue = $_SESSION['queue'];
+  $queue[count($queue)] = $value;
+  $_SESSION['queue'] = $queue;
 }
 
 if (isset($_POST['pop'])) {
-  if (!empty($_SESSION['queue'])) {
-    array_shift($_SESSION['queue']);
+$queue = $_SESSION['queue'];
+if (count($queue) > 0) {
+  $value = $queue[0];
+  for ($i = 0; $i < count($queue) - 1; $i++) {
+    $queue[$i] = $queue[$i + 1];
   }
+  unset($queue[count($queue) - 1]);
+  $_SESSION['queue'] = $queue;
+}
 }
 
 $queue = $_SESSION['queue'];
 
-      
-
+    
 -->
           </textarea>
         </div>

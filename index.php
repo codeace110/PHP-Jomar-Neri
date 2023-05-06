@@ -76,7 +76,11 @@
                 </tr>
                 <tr class="table-row">
                   <th class="table_main" scope="row">5. Using a PHP POST method, ask the user to input 2 numbers</th>
-                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
+                  <td class="table_main"><a href="./part2-num5.php" class="btn btn-success">Task page</a></td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table_main" scope="row">5. Using a PHP POST method, ask the user to input 2 numbers</th>
+                  <td class="table_main"><a href="./part2-num6.php" class="btn btn-success">Task page</a></td>
                 </tr>
               </tbody>
             </table>

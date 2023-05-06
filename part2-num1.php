@@ -78,35 +78,35 @@
 
             <h1>Code</h1>
             <textarea class="CodeMirror" id="code">
-            <? php
-            $characters = range('a', 'k');
-            shuffle($characters);
-            $table = array();
+<!--            
+$characters = range('a', 'k');
+shuffle($characters);
+$table = array();
 
-            for ($i = 0; $i < 4; $i++) {
-                $row = array();
-                for ($j = 0; $j < 5; $j++) {
-                    $row[] = $characters[$i * 2 + $j];
-                }
-                $table[] = $row;
-            }
+for ($i = 0; $i < 4; $i++) {
+$row = array();
+for ($j = 0; $j < 5; $j++) {
+    $row[] = $characters[$i * 2 + $j];
+}
+$table[] = $row;
+}
 
-            // Display the table
-            echo "<table class='table'>";
-            foreach ($table as $row) {
-                echo "<tr style='height: 70px;'>";
-                foreach ($row as $key => $char) {
-                    $class = ($key % 2 == 0) ? 'even' : 'odd';
-                    echo "<td class=\"$class\" style='width: 70px; color:white;'>$char</td>";
-                }
-                echo "</tr>";
-            }
-            echo "</table>";
+// Display the table
+echo "<table class='table'>";
+foreach ($table as $row) {
+echo "<tr style='height: 70px;'>";
+foreach ($row as $key => $char) {
+    $class = ($key % 2 == 0) ? 'even' : 'odd';
+    echo "<td class=\"$class\" style='width: 70px; color:white;'>$char</td>";
+}
+echo "</tr>";
+}
+echo "</table>";
 
-            echo "<style>";
-            echo "td.even { background-color: rgb(62, 95, 10); }";
-            echo "</style>";
-            ?>
+echo "<style>";
+echo "td.even { background-color: rgb(62, 95, 10); }";
+echo "</style>";
+-->
             </textarea>
         </div>
             </div>
