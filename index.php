@@ -72,7 +72,7 @@
                 </tr>
                 <tr class="table-row">
                   <th class="table_main" scope="row">4. Create a queue of integers using arrays (first in first out )</th>
-                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
+                  <td class="table_main"><a href="./part2-num4.php" class="btn btn-success">Task page</a></td>
                 </tr>
                 <tr class="table-row">
                   <th class="table_main" scope="row">5. Using a PHP POST method, ask the user to input 2 numbers</th>

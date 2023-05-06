@@ -229,7 +229,7 @@ h6 {
 /*******part2 num1 Ends*******/
 
 
-/*******part2 num3 Ends*******/
+/*******part2 num3 *******/
 
 
 form {
@@ -266,4 +266,13 @@ input[type="submit"]:hover {
 }
 #stack > p{
   margin-left: 20px;
+}
+
+/*******part2 num4 Ends*******/
+
+
+#queue > li {
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
 }
