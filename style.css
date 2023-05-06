@@ -319,3 +319,15 @@ button[type="submit"]:hover {
 
 
 }
+
+.sort_number{
+  font-size: 26px;
+  font-weight: 900;
+  color: white;
+  margin-left: 20px;
+
+}
+.output-container{
+  display: flex;
+
+}

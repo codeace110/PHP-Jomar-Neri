@@ -88,8 +88,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
           <h1>Code</h1>
           <textarea class="CodeMirror" id="code">
+       
+<!-- if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $length = $_POST["length"];
+  $width = $_POST["width"];
 
+  // define consonant letters
+  $consonants = array('B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z');
 
+  // generate grid with random consonant letters
+  $grid = array();
+  for ($i = 0; $i < $length; $i++) {
+    $row = array();
+    for ($j = 0; $j < $width; $j++) {
+      $random_consonant = $consonants[array_rand($consonants)];
+      $row[] = $random_consonant;
+    }
+    $grid[] = $row;
+  }
+}
+ -->
 
             </textarea>
         </div>
