@@ -78,7 +78,7 @@
                 <div class="col-md-6">
 
             <h1>Code</h1>
-            <textarea class="CodeMirror" id="code">
+            <textarea class="CodeMirror cm-s-darcula" id="code">
 <!--            
 $characters = range('a', 'k');
 shuffle($characters);
