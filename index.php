@@ -31,20 +31,20 @@
               </thead>
               <tbody>
                 <tr class="table-row">
-                  <th class="table_main" scope="row">1. Create the given pattern</th>
-                  <td class="table_main"><a href="part2-num1.php" class="btn btn-success">Task page</a></td>
+                  <th class="table_main" scope="row">1. Create the given pattern Task 1</th>
+                  <td class="table_main"><a href="./patern1.php" class="btn btn-success">Task page</a></td>
 
                 </tr>
                 <tr class="table-row">
-                  <th class="table_main" scope="row">2. Create the given pattern (x)</th>
+                  <th class="table_main" scope="row">2. Create the given pattern (x) Task 2</th>
                   <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr >
                 <tr class="table-row">
-                  <th class="table_main" scope="row">3. Create the given pattern</th>
+                  <th class="table_main" scope="row">3. Create the given pattern Task 3</th>
                   <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr>
                 <tr class="table-row">
-                  <th class="table_main" scope="row">4.Create the given pattern</th>
+                  <th class="table_main" scope="row">4.Create the given pattern Task 4</th>
                   <td class="table_main"><button class="btn btn-success">Task page</button></td>
                 </tr>
               </tbody>

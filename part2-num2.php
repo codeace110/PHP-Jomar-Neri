@@ -16,6 +16,7 @@
 </style>
 
 <body>
+<a href="./index.php"><button class="homeBtn">Home</button></a>
     <header>
         <nav class="nav">
 
@@ -83,6 +84,7 @@
                             echo "<style>
                         table {
                         border-collapse: collapse;
+                      
                         width: 240px;
                         }
                         td {
@@ -91,6 +93,7 @@
                         height: 70px;
                         text-align: center;
                         padding: 5px;
+                        background-color:#cccccc85;
                         }
                         </style>";
                             echo "<table class='table-borderless'>";

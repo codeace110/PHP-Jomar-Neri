@@ -16,6 +16,7 @@
 </style>
 
 <body>
+<a href="./index.php"><button class="homeBtn">Home</button></a>
   <header>
     <nav class="nav">
       <h1>Part 2 </h1>

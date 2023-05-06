@@ -16,6 +16,8 @@
 </style>
 
 <body>
+<a href="./index.php"><button class="homeBtn">Home</button></a>
+    
     <header>
         <nav class="nav">
             <h1>Part 2 </h1>
@@ -53,25 +55,12 @@
                     $sorted_numbers = bubbleSort($numbers);
                     ?>
 
-                    <!-- Output container -->
-                    <div class="output-container">
-                        <h2> Sorted Numbers:</h2>
-                        <?php
-                        // Output the sorted numbers inside the container
-                        foreach ($sorted_numbers as $number) {
-                            
-                            
-                            echo "<p class=\"sort_number\">$number</p>";
-                        }
-                        ?>
-                    </div>
-
                     <div id="explaination">
-                        <img src="" alt="">
+                        <img class="num6" src="./assets/img/tasknum6.png" alt="">
                         <h4>Explaination</h4>
                         <p>
                         The code above is an implementation of the bubble sort algorithm, 
-                        which sorts an array by repeatedly swapping adjacent elements if 
+                        which sorts an array by repeatedly swapping elements if 
                         they are in the wrong order.
 
                         However, there is an error in the swapping step. 
@@ -102,6 +91,19 @@
         return $lists;
     } -->
             </textarea>
+                          <!-- Output container -->
+                          <h5>OUTPUT</h5>
+                          <div class="output-container">
+                        <h2> Sorted Numbers:</h2>
+                        <?php
+                        // Output the sorted numbers inside the container
+                        foreach ($sorted_numbers as $number) {
+                            
+                            
+                            echo "<p class=\"sort_number\">$number</p>";
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

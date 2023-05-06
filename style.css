@@ -4,6 +4,30 @@
   font-family: "Roboto", sans-serif;
 }
 
+.homeBtn {
+  background-color: #40c3ff;
+  color: white;
+  width: 120px;
+  height: 60px;
+  top: 10px;
+  left: 20px;
+  position: absolute;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out; 
+  font-weight: 900;
+  font-size: x-large;
+  border-style: none;
+  
+  }
+  
+  .homeBtn:hover {
+  background-color: rgb(174, 130, 255);
+
+  transform: scale(1.1);
+  }
+  
+  
+
 body {
   background-image: url(assets/img/background.png);
   background-repeat: no-repeat;
@@ -202,6 +226,19 @@ h6 {
 
 /*******text area theme Ends*******/
 
+/*******part1 PATERN CC*******/
+.pattern{
+  background-color: white;
+  padding: 60px;
+  font-weight: 900;
+  font-size: 15px;
+  width: 400px;
+  height: 400px;
+
+}
+
+
+
 /*******part2 num1*******/
 
 .table-borderless {
@@ -300,7 +337,7 @@ button[type="submit"]:hover {
 
 /*******part2 num4 Ends *******/
 
-/*******part2 num5 Ends *******/
+/*******part2 num5  *******/
 #table-num5{
 
   background-color: white;
@@ -320,6 +357,9 @@ button[type="submit"]:hover {
 
 }
 
+/*******part2 num5  *******/
+/*******part2 num6  *******/
+
 .sort_number{
   font-size: 26px;
   font-weight: 900;
@@ -331,3 +371,11 @@ button[type="submit"]:hover {
   display: flex;
 
 }
+.num6{
+  height: 300px;
+}
+#explaination > p {
+  color: white;
+}
+
+/*******part2 num6 End  *******/
