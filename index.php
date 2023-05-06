@@ -49,6 +49,12 @@
                 </tr>
               </tbody>
             </table>
+            <div id="submited">
+              <h1>Submitted by : Jomar Neri</h1>
+
+              <a href="https://github.com/codeace110/PHP-Jomar-Neri.git"><h6>https://github.com/codeace110/PHP-Jomar-Neri.git</h6></a>
+
+            </div>
         </div>
         
         <div class="col-md-6">
