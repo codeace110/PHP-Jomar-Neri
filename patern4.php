@@ -40,12 +40,14 @@
 
                         for ($i = 1; $i <= $size; $i++) {
                             $current = $i;
+                       
 
                             for ($j = 1; $j <= $size; $j++) {
-                                echo $current . " ";
+                                echo $current . " "  ;
 
                                 $current *= $factor + $j - 1;
                             }
+                            
                             echo "<br>";
                         }
                         ?>
