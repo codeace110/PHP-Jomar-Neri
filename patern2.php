@@ -21,7 +21,7 @@
         <nav class="nav">
             <h1>Part 1 </h1>
             <h3>
-                PATTERN Task2
+                PATTERN Task 2
             </h3>
             <br>
 
