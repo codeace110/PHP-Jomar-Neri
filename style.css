@@ -227,3 +227,43 @@ h6 {
   height: 400px;
 }
 /*******part2 num1 Ends*******/
+
+
+/*******part2 num3 Ends*******/
+
+
+form {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #1e3f1f;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #035806;
+  
+}
+#stack{
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+
+}
+#stack > p{
+  margin-left: 20px;
+}

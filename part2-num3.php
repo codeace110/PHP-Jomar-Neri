@@ -39,46 +39,52 @@
                 <div class="col-md-6">
                     <table class="table">
                         <thead>
-                            <h1>(odd/even column)</h1>
+                            <h1>arrays( First in last out )</h1>
                         </thead>
                         <tbody>
-                        <?php
+                            <?php
+                            // Initialize the stack
+                            session_start();
+                            if (!isset($_SESSION['stack'])) {
+                                $_SESSION['stack'] = array();
+                            }
+                            $stack = $_SESSION['stack'];
 
-// Generate 10 random integers to add to the stack
-$stack = [1 , 2 , 3 , 4 ,5 ,6 ,7 ];
+                            // Handle push operation
+                            if (isset($_POST['push'])) {
+                                $value = $_POST['value'];
+                                $stack[] = $value; // Add the new value to the end of the array
+                                $_SESSION['stack'] = $stack; // Store the updated stack in the session
+                            }
 
+                            // Handle pop operation
+                            if (isset($_POST['pop'])) {
+                                if (count($stack) > 0) {
+                                    $value = $stack[count($stack) - 1]; // Get the last element
+                                    unset($stack[count($stack) - 1]); // Remove the last element
+                                    $_SESSION['stack'] = $stack; // Store the updated stack in the session
+                                }
+                            }
 
-// Handle push operation
-if (isset($_POST['push'])) {
-    $value = $_POST['value'];
-    array_unshift($stack, $value);
-}
+                            // Display the stack
+                            echo "<h2>Stack</h2>";
+                            if (empty($stack)) {
+                                echo "<p>empty</p>";
+                            } else {
+                                echo "<div id=\"stack\">";
+                                foreach ($stack as $value) {
+                                    echo "<p>$value</p>";
+                                }
+                                echo "</div>";
+                            }
 
-// Handle pop operation
-if (isset($_POST['pop'])) {
-    if (!empty($stack)) {
-        array_shift($stack);
-    }
-}
-
-// Display the stack
-echo "<h2>Stack</h2>";
-if (empty($stack)) {
-    echo "<p>empty</p>";
-} else {
-    foreach ($stack as $value) {
-        echo "<p>$value</p>";
-    }
-}
-
-// Display the input form
-echo "<form method=\"post\">";
-echo "<input type=\"text\" name=\"value\">";
-echo "<input type=\"submit\" name=\"push\" value=\"Push\">";
-echo "<input type=\"submit\" name=\"pop\" value=\"Pop\">";
-echo "</form>";
-
-?>
+                            // Display the input form
+                            echo "<form method=\"post\">";
+                            echo "<input type=\"number\" name=\"value\">";
+                            echo "<input type=\"submit\" name=\"push\" value=\"Push\">";
+                            echo "<input type=\"submit\" name=\"pop\" value=\"Pop\">";
+                            echo "</form>";
+                            ?>
 
                         </tbody>
                     </table>
@@ -88,36 +94,50 @@ echo "</form>";
 
                     <h1>Code</h1>
                     <textarea class="CodeMirror" id="code">
-            <!-- 
-            $characters = range('a', 'k');
-            shuffle($characters);
-            $table = array();
+<!-- 
+    // Initialize the stack
+    session_start();
+    if (!isset($_SESSION['stack'])) {
+        $_SESSION['stack'] = array();
+    }
+    $stack = $_SESSION['stack'];
 
-            for ($i = 0; $i < 4; $i++) {
-                $row = array();
-                for ($j = 0; $j < 5; $j++) {
-                    $row[] = $characters[$i * 2 + $j];
-                }
-                $table[] = $row;
-            }
+    // Handle push operation
+    if (isset($_POST['push'])) {
+        $value = $_POST['value'];
+        $stack[] = $value; // Add the new value to the end of the array
+        $_SESSION['stack'] = $stack; // Store the updated stack in the session
+    }
 
-            // Display the table
-            echo "<table class='table'>";
-            foreach ($table as $row) {
-                echo "<tr style='height: 70px;'>";
-                foreach ($row as $key => $char) {
-                    $class = ($key % 2 == 0) ? 'even' : 'odd';
-                    echo "<td class=\"$class\" style='width: 70px; color:white;'>$char</td>";
-                }
-                echo "</tr>";
-            }
-            echo "</table>";
+    // Handle pop operation
+    if (isset($_POST['pop'])) {
+        if (count($stack) > 0) {
+            $value = $stack[count($stack) - 1]; // Get the last element
+            unset($stack[count($stack) - 1]); // Remove the last element
+            $_SESSION['stack'] = $stack; // Store the updated stack in the session
+        }
+    }
 
-            echo "<style>";
-            echo "td.even { background-color: rgb(62, 95, 10); }";
-            echo "</style>";
-            ?> -->
-            </textarea>
+    // Display the stack
+    echo "<h2>Stack</h2>";
+    if (empty($stack)) {
+        echo "<p>empty</p>";
+    } else {
+        echo "<div id=\"stack\">";
+        foreach ($stack as $value) {
+            echo "<p>$value</p>";
+        }
+        echo "</div>";
+    }
+
+    // Display the input form
+    echo "<form method=\"post\">";
+    echo "<input type=\"number\" name=\"value\">";
+    echo "<input type=\"submit\" name=\"push\" value=\"Push\">";
+    echo "<input type=\"submit\" name=\"pop\" value=\"Pop\">";
+    echo "</form>";
+-->
+                   </textarea>
                 </div>
             </div>
         </div>
