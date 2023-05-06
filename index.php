@@ -37,15 +37,15 @@
                 </tr>
                 <tr class="table-row">
                   <th class="table_main" scope="row">2. Create the given pattern (x) Task 2</th>
-                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
+                  <td class="table_main"><a href="./patern2.php" class="btn btn-success">Task page</a></td>
                 </tr >
                 <tr class="table-row">
                   <th class="table_main" scope="row">3. Create the given pattern Task 3</th>
-                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
+                  <td class="table_main"><a href="./patern3.php" class="btn btn-success">Task page</a></td>
                 </tr>
                 <tr class="table-row">
                   <th class="table_main" scope="row">4.Create the given pattern Task 4</th>
-                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
+                  <td class="table_main"><a href="./patern4.php" class="btn btn-success">Task page</a></td>
                 </tr>
               </tbody>
             </table>
