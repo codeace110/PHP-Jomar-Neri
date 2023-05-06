@@ -101,7 +101,7 @@
                     <textarea class="CodeMirror" id="code">
 
 <!-- 
-function printPyramid($size)
+function printX($size)
 {
     // Downside 
     // Downside 
@@ -143,7 +143,7 @@ function printPyramid($size)
             //middle spaces and stars
             echo str_repeat("&nbsp;", ($i - 1) * 10);
             echo "$i";
-        }  else {
+        } else {
             echo str_repeat("&nbsp;", ($i - 1) * 10);
             echo "*";
         }
@@ -153,7 +153,7 @@ function printPyramid($size)
 
 $size = 5;
 
-printPyramid($size);
+printX($size);
 
 
 
