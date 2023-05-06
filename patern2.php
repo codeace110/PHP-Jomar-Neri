@@ -35,7 +35,7 @@
                 <div class="col-md-6">
                     <div class="pattern">
                         <?php
-                        function printPyramid($size)
+                        function printX($size)
                         {
                             // Downside 
                             // Downside 
@@ -87,7 +87,7 @@
 
                         $size = 5;
 
-                        printPyramid($size);
+                        printX($size);
 
                         ?>
 
