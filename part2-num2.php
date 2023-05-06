@@ -81,36 +81,37 @@
 
                             // Print the table with CSS styling and padding
                             echo "<style>
-                            table {
-                            border-collapse: collapse;
-                            width: 240px;
-                            }
-                            td {
-                            border: 1px solid black;
-                            width: 30px;
-                            height: 30px;
-                            text-align: center;
-                            padding: 5px;
-                            }
-                            </style>";
-                            echo "<table>";
+                        table {
+                        border-collapse: collapse;
+                        width: 240px;
+                        }
+                        td {
+                        border: 1px solid black;
+                        width: 100px;
+                        height: 70px;
+                        text-align: center;
+                        padding: 5px;
+                        }
+                        </style>";
+                            echo "<table class='table-borderless'>";
                             for ($i = 0; $i < 4; $i++) {
                                 echo "<tr>";
                                 for ($j = 0; $j < 4; $j++) {
                                     $cell = $table[$i][$j];
                                     echo "<td>$cell</td>";
                                 }
-                                echo "<td>$row_sums[$i]</td>";
+                                echo "<td class='table-borderless-left'>$row_sums[$i]</td>";
                                 echo "</tr>";
-                     
                             }
-                            echo "<tr>";
+                            echo "<tr >";
                             for ($j = 0; $j < 4; $j++) {
-                                echo "<td>$col_sums[$j]</td>";
+                                echo "<td class='table-borderless'>$col_sums[$j]</td>";
                             }
                             echo "</tr>";
                             echo "</table>";
+
                             ?>
+
 
                         </tbody>
                     </table>
@@ -120,16 +121,77 @@
                     <h1>Code</h1>
                     <textarea class="CodeMirror" id="code">
 
+<!--            
+                     
+                    // Initialize 4x4 array with zeros
+                    $table = array(
+                        array(0, 0, 0, 0),
+                        array(0, 0, 0, 0),
+                        array(0, 0, 0, 0),
+                        array(0, 0, 0, 0)
+                    );
 
+                    // Generate unique random numbers
+                    $numbers = array();
+                    while (count($numbers) < 16) {
+                        $num = rand(1, 100);
+                        if (!in_array($num, $numbers)) {
+                            $numbers[] = $num;
+                        }
+                    }
 
+                    // Fill the table with the random numbers
+                    for ($i = 0; $i < 16; $i++) {
+                        $row = floor($i / 4);
+                        $col = $i % 4;
+                        $table[$row][$col] = $numbers[$i];
+                    }
 
+                    // Calculate row and column sums
+                    $col_sums = array(0, 0, 0, 0);
+                    $row_sums = array(0, 0, 0, 0);
+                    for ($i = 0; $i < 4; $i++) {
+                        for ($j = 0; $j < 4; $j++) {
+                            $col_sums[$j] += $table[$i][$j];
+                            $row_sums[$i] += $table[$i][$j];
+                        }
+                    }
+                    $total_sum = array_sum($numbers);
 
+                    // Print the table with CSS styling and padding
+                    echo "<style>
+                    table {
+                    border-collapse: collapse;
+                    width: 240px;
+                    }
+                    td {
+                    border: 1px solid black;
+                    width: 100px;
+                    height: 70px;
+                    text-align: center;
+                    padding: 5px;
+                    }
+                    </style>";
+                    echo "<table class='table-borderless'>";
+                    for ($i = 0; $i < 4; $i++) {
+                        echo "<tr>";
+                        for ($j = 0; $j < 4; $j++) {
+                            $cell = $table[$i][$j];
+                            echo "<td>$cell</td>";
+                        }
+                        echo "<td class='table-borderless-left'>$row_sums[$i]</td>";
+                        echo "</tr>";
+                    }
+                    echo "<tr >";
+                    for ($j = 0; $j < 4; $j++) {
+                        echo "<td class='table-borderless'>$col_sums[$j]</td>";
+                    }
+                    echo "</tr>";
+                    echo "</table>"; -->
 
+              
 
-
-
-
-            </textarea>
+                    </textarea>
                 </div>
             </div>
         </div>

@@ -50,6 +50,7 @@
               </tbody>
             </table>
         </div>
+        
         <div class="col-md-6">
                <section>
             <table class="table table-dark table-hover">
@@ -59,15 +60,15 @@
               <tbody>
                 <tr class="table-row">
                   <th class="table_main" scope="row">1. Generate a random character from a -k</th>
-                  <td class="table_main"><a href="part2-num1.php" class="btn btn-success">Task page</a></td>
+                  <td class="table_main"><a href="./part2-num1.php" class="btn btn-success">Task page</a></td>
                 </tr>
                 <tr class="table-row">
                   <th class="table_main" scope="row">2. Manipulation of multidimensional array</th>
-                  <td class="table_main"><a href="part2-num2.php" class="btn btn-success">Task page</a></td>
+                  <td class="table_main"><a href="./part2-num2.php" class="btn btn-success">Task page</a></td>
                 </tr>
                 <tr class="table-row">
                   <th class="table_main" scope="row">3. Create a stack of integers using arrays( First in last out )</th>
-                  <td class="table_main"><button class="btn btn-success">Task page</button></td>
+                  <td class="table_main"><a href="./part2-num3.php" class="btn btn-success">Task page</a></td>
                 </tr>
                 <tr class="table-row">
                   <th class="table_main" scope="row">4. Create a queue of integers using arrays (first in first out )</th>
