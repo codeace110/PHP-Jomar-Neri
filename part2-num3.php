@@ -146,18 +146,16 @@
     <!-- Bootstrap JS and Bundle CDN links -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.63.1/lib/codemirror.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.63.1/mode/clike/clike.js"></script>
     <script>
         var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
             lineNumbers: true,
-            mode: "application/x-httpd-php",
-            matchBrackets: true,
-            viewportMargin: Infinity,
-            lineWrapping: true,
             maxLineLength: 80,
-            theme: "darcula"
+            mode: "application/x-httpd-php-open",
+            theme: "default",
+            mode: "clike"
         });
     </script>
-
 </body>
 
 </html>
